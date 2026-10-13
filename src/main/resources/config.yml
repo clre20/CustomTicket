@@ -1,0 +1,93 @@
+# ==========================================================
+#  CustomTicket (C-Ticket) 設定檔
+#  作者: Clre20 | https://github.com/clre20/CustomTicket
+#  支援 & 色碼、&#RRGGBB 十六進位色碼與 MiniMessage (<green>文字</green>)
+#  新版本新增的設定項目會在啟動 / 重載時自動補齊
+# ==========================================================
+
+# 設定檔版本 (請勿修改)
+config-version: 1
+
+# 插件訊息開頭的文字
+prefix: "&8[&6C-Ticket&8] &r"
+
+# ----------------------------------------------------------
+#  更新檢查
+# ----------------------------------------------------------
+update-checker:
+  # 是否在啟動時檢查 GitHub 上的新版本
+  enabled: true
+  # 有新版本時是否在管理員進入伺服器時提醒
+  notify-op: true
+
+# 聊天欄輸入等待時間 (秒)
+chat-input-timeout: 60
+
+# ----------------------------------------------------------
+#  介面標題
+# ----------------------------------------------------------
+gui:
+  editor-title: "&8門票編輯 - &6%name%"
+  commands-title: "&8指令列表 - &6%name%"
+  command-action-title: "&8指令 #%index% 操作"
+  confirm-title: "&8是否使用門票？"
+
+# ----------------------------------------------------------
+#  訊息
+# ----------------------------------------------------------
+messages:
+  no-permission: "&c你沒有權限執行此指令！"
+  player-only: "&c此指令只能由玩家執行！"
+  unknown-command: "&c未知的子指令，請輸入 &e/%label% help &c查看說明。"
+  usage-create: "&c用法: /%label% create <名稱>"
+  usage-delete: "&c用法: /%label% del <名稱>"
+  usage-give: "&c用法: /%label% give <名稱> [玩家] [數量]"
+  usage-edit: "&c用法: /%label% edit <名稱>"
+  invalid-name: "&c門票名稱只能包含英文字母、數字、底線與減號！"
+  ticket-exists: "&c門票 &e%name% &c已經存在！"
+  ticket-not-found: "&c找不到門票 &e%name%&c！"
+  player-not-found: "&c找不到玩家 &e%player%&c！"
+  invalid-amount: "&c數量必須是 1 ~ 2304 之間的整數！"
+  ticket-deleted: "&a已刪除門票 &e%name%&a！"
+  ticket-given: "&a已給予 &e%player% %amount% &a張門票 &e%name%&a！"
+  ticket-received: "&a你收到了 &e%amount% &a張門票 &e%name%&a！"
+  ticket-saved: "&a已儲存門票 &e%name%&a，所有現有門票已自動更新！"
+  editor-cancelled: "&7已取消編輯，變更未儲存。"
+  editor-busy: "&c門票 &e%name% &c正在被 &e%player% &c編輯中！"
+  no-item-set: "&c請先點擊背包中的物品設定門票物品！"
+  item-set: "&a已設定門票物品: &e%item%"
+  reloaded: "&aCustomTicket 設定與所有門票已重新載入！"
+  list-header: "&6===== 門票列表 (&e%count%&6) ====="
+  list-entry: "&7- &e%name% &7(%display%&7)"
+  list-empty: "&7目前沒有任何門票。"
+  list-hover: "&e點擊填入給予指令"
+  version: "&7目前版本: &e%version%"
+  update-checking: "&7正在檢查更新..."
+  update-available: "&a發現新版本 &e%latest%&a (目前 &e%version%&a)！下載: &b%url%"
+  update-latest: "&a目前已是最新版本。"
+  update-failed: "&c檢查更新失敗: &7%error%"
+  ticket-invalid: "&c此門票已失效！"
+  ticket-no-permission: "&c你沒有權限使用此門票！"
+  ticket-cooldown: "&c此門票冷卻中，請等待 &e%time% &c秒！"
+  ticket-used: "&a已使用門票 &e%name%&a！"
+  ticket-missing: "&c你手上已經沒有這張門票了！"
+  input-cancel-hint: "&7(輸入 &ccancel &7或 &c取消 &7放棄)"
+  input-cancelled: "&7已取消輸入。"
+  input-timeout: "&c輸入逾時，已自動取消。"
+  input-name: "&e請在聊天欄輸入門票顯示名稱："
+  input-lore: "&e請在聊天欄輸入門票描述，使用 &6| &e分行，輸入 &6清除 &e清空："
+  input-prompt: "&e請在聊天欄輸入使用時的提示詞，使用 &6| &e分行，輸入 &6清除 &e清空："
+  input-permission: "&e請在聊天欄輸入使用權限節點，輸入 &6無 &e取消權限限制："
+  input-cooldown: "&e請在聊天欄輸入冷卻時間 (秒)，輸入 &60 &e取消冷卻："
+  input-command: "&e請在聊天欄輸入指令，可用前綴 &6[console] [player] [op] [message]&e，變數 &6%player% %uuid% %world% %x% %y% %z%&e："
+  invalid-number: "&c請輸入有效的非負整數！"
+  help:
+    - "&6===== CustomTicket 指令說明 ====="
+    - "&e/%label% &7- 查看插件版本並檢查更新"
+    - "&e/%label% create <名稱> &7- 建立門票"
+    - "&e/%label% del <名稱> &7- 刪除門票"
+    - "&e/%label% give <名稱> [玩家] [數量] &7- 給予門票"
+    - "&e/%label% edit <名稱> &7- 編輯門票 (現有門票自動更新)"
+    - "&e/%label% list &7- 門票列表"
+    - "&e/%label% reload &7- 重新載入"
+    - "&e/%label% help &7- 顯示此說明"
