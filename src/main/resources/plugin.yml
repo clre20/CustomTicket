@@ -1,0 +1,25 @@
+name: CustomTicket
+description: 自訂門票插件 - 以箱子介面建立右鍵執行指令的門票
+prefix: CTicket
+version: '${version}'
+
+main: clre20.customTicket.CustomTicket
+api-version: '1.21'
+load: POSTWORLD
+
+authors: [ Clre20 ]
+website: https://github.com/clre20/CustomTicket
+
+commands:
+  cticket:
+    description: CustomTicket 主指令
+    aliases: [ c-ticket, ct ]
+    usage: /<command> [help|create|del|give|edit|list|reload]
+
+permissions:
+  customticket.admin:
+    description: 使用所有 CustomTicket 管理指令
+    default: op
+  customticket.use:
+    description: 使用門票
+    default: true
