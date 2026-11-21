@@ -8,6 +8,9 @@
 
 ---
 
+
+> **版本檢查提示**：若伺服器有安裝 [HttpHub](https://github.com/clre20/HttpHub)，本插件自動由 HttpHub 集中處理版本檢查與管理員登入通知，避免各插件自開連線與背景執行緒。
+
 ## 功能
 
 - **用介面建立門票**：不用改設定檔，在遊戲裡點一點就能做好
@@ -134,6 +137,9 @@
 
 
 # CustomTicket
+
+
+> **Update Checker**: When [HttpHub](https://github.com/clre20/HttpHub) is installed, update checks and operator login alerts are handled centrally by HttpHub via virtual threads, preventing redundant background connections.
 
 Create "ticket" items in-game using a chest menu. When a player holds a ticket and right-clicks, a confirmation window appears. After the player confirms, the commands you set up are run and one ticket is used up.
 

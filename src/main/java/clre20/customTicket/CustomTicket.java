@@ -75,7 +75,9 @@ public final class CustomTicket extends JavaPlugin {
         log("&7 作者: Clre20 | 支援版本: 1.21.x / 26.x");
         log("&8==========================================");
 
-        if (configManager.updateCheckEnabled()) {
+        if (getServer().getPluginManager().isPluginEnabled("HttpHub") && clre20.httpHub.api.HttpHubAPI.isAvailable()) {
+            clre20.httpHub.api.HttpHubAPI.registerUpdateCheck(this, "clre20/CustomTicket", getPluginMeta().getVersion(), "customticket.admin", null);
+        } else if (configManager.updateCheckEnabled()) {
             updateChecker.check(result -> {
                 if (result.success() && result.newer()) {
                     updateChecker.report(Bukkit.getConsoleSender(), result);

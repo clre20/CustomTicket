@@ -23,3 +23,5 @@ permissions:
   customticket.use:
     description: 使用門票
     default: true
+
+softdepend: [ HttpHub ]
